@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b000acb904f0264c803794b81392546
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Enemy: {instanceID: 0}
+  - HHP: {instanceID: 0}
+  - rock: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
