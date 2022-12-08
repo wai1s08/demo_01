@@ -1,27 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Enemy2 : MonoBehaviour
 {
+    public float chasingSpeed;//追逐速度
     public float enemyDiedtime1;
     public GameObject enemtDied1;
-    public float chasingSpeed;//追逐速度
-    new Vector3 playerPos;
+    public Vector3 playerPos;
+    public GameObject player1;
 
-    private void OnTriggerEnter2D(Collider2D a)
+
+    public void DoDamage()
     {
-        a.gameObject.GetComponent<PlayerMove>().playerHP -= 10;
+        player1.GetComponent<PlayerMove>().playerHP -= 10;
+       
+        Instantiate(enemtDied1, transform.position, Quaternion.identity);
+
         Destroy(gameObject, enemyDiedtime1);
+         
     }
  
 
-    void OnDestroy()
-    {
-        Instantiate(enemtDied1, transform.position, Quaternion.identity);
-    }
 
-    private void Update()
+    public void MoveToPlayer()
     {
         playerPos = GameObject.Find("Player").gameObject.transform.position;
         gameObject.transform.position = Vector3.MoveTowards(transform.position, playerPos, chasingSpeed*Time.deltaTime);
