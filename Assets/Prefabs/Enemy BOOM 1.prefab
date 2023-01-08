@@ -346,8 +346,8 @@ GameObject:
   m_Component:
   - component: {fileID: 435790146953930492}
   - component: {fileID: 816567105074337721}
-  - component: {fileID: 435790146953930493}
   - component: {fileID: 7830161540247570851}
+  - component: {fileID: -9068810925523018561}
   m_Layer: 0
   m_Name: Enemy BOOM 1
   m_TagString: Untagged
@@ -394,21 +394,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &435790146953930493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6388331743388592828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf8d320c4c72ae4f88605d1f690aea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDiedtime1: 0.1
-  enemtDied1: {fileID: 965868871452911210, guid: 346e5914f2651794ca1b7e9771fbc4cb, type: 3}
-  chasingSpeed: 5
 --- !u!58 &7830161540247570851
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -425,3 +410,22 @@ CircleCollider2D:
   m_Offset: {x: 0.084097385, y: 0}
   serializedVersion: 2
   m_Radius: 1.4720721
+--- !u!114 &-9068810925523018561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388331743388592828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171b4b4c4d2ddc44498fe70601ab4e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chasingSpeed: 0
+  enemyDiedtime1: 0.1
+  enemtDied1: {fileID: 5767795767962557175, guid: 3fb783ad4352c2c47ace277e741da0b7, type: 3}
+  playerPos: {x: 0, y: 0, z: 0}
+  player1: {fileID: 0}
+  atime: 0
+  Spawner: {fileID: 0}

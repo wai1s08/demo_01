@@ -9,7 +9,6 @@ public class EnemyNormal : Enemy2
     {
         if (collision.tag == "Player")
         {
-            
             DoDamage();
         }
     }

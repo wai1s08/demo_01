@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject Enemy;
+    public GameObject Enemy1;
+    public GameObject Enemy2;
+    public GameObject Enemy3;
     public GameObject HHP;
     public GameObject rock;
     public int y;//生成石頭數量
@@ -25,10 +27,24 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timeBetween += Time.deltaTime;
-        if(timeBetween>spawnTime   )
+        
+        if(timeBetween>spawnTime)
         {
-            SpawnObject(Enemy);
             SpawnObject(HHP);
+            int emenyNuber = Random.Range(1, 3);
+            if (emenyNuber == 1)
+            {
+                SpawnObject(Enemy1);
+            }
+            else if(emenyNuber ==2)
+            {
+                SpawnObject(Enemy2);
+               
+            }
+            else if (emenyNuber == 3)
+            {
+                SpawnObject(Enemy3);
+            }
             timeBetween = 0;
         }
 

@@ -10,7 +10,10 @@ public class Enemy2 : MonoBehaviour
     public Vector3 playerPos;
     public GameObject player1;
 
-
+    private void Start()
+    {
+        player1 = GameObject.Find("Player");
+    }
     public void DoDamage()
     {
         player1.GetComponent<PlayerMove>().playerHP -= 10;
@@ -20,14 +23,11 @@ public class Enemy2 : MonoBehaviour
         Destroy(gameObject, enemyDiedtime1);
          
     }
- 
-
-
     public void MoveToPlayer()
     {
         playerPos = GameObject.Find("Player").gameObject.transform.position;
         gameObject.transform.position = Vector3.MoveTowards(transform.position, playerPos, chasingSpeed*Time.deltaTime);
         chasingSpeed += Random.Range(0.001f,0.005f);
-
+        
     }
 }

@@ -426,3 +426,4 @@ MonoBehaviour:
   enemyDiedtime1: 0.1
   enemtDied1: {fileID: 5767795767962557175, guid: 3fb783ad4352c2c47ace277e741da0b7, type: 3}
   playerPos: {x: 0, y: 0, z: 0}
+  player1: {fileID: 0}
